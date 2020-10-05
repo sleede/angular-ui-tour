@@ -16,6 +16,10 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
+.tourStep.ui-tour-popup.popover.left {
+    left: unset;
+}
+
 /*improve popover arrows:*/
 .ui-tour-popup.popover.bottom-left > .arrow,
 .ui-tour-popup.popover.top-left > .arrow {
