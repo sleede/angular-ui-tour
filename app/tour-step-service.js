@@ -13,7 +13,7 @@ export default function (Tether, $compile, $document, $templateCache, $rootScope
                 tourStep: step,
                 tour: tour
             }),
-            popup = $compile($templateCache.get('/tour-step-popup.html'))(scope),
+            popup = $compile($templateCache.get('tour-step-popup.html'))(scope),
             parent = step.config('appendToBody') ? angular.element($document[0].body) : step.element.parent();
 
         parent.append(popup);
