@@ -34,9 +34,8 @@ export default angular.module('bm.uiTour', [
     'cfp.hotkeys',
     'angular-bind-html-compile'
 ])
-    .run(run)
+    .run(['TourConfig', 'uiTourService', '$rootScope', '$injector', run])
     .value('Tether', Tether)
-    .value('Hone', Hone)
     .constant('positionMap', require('./tether-position-map').default)
     .provider('TourConfig', require('./tour-config-provider').default)
     .factory('uiTourBackdrop', require('./backdrop-service').default)
