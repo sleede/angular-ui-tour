@@ -4,6 +4,7 @@ import 'angular-scroll';
 import 'angular-hotkeys';
 import 'angular-bind-html-compile';
 import Tether from 'tether';
+import Hone from 'hone'; // eslint-disable-line no-unused-vars
 import './styles/angular-ui-tour.css';
 
 function run(TourConfig, uiTourService, $rootScope, $injector) {
