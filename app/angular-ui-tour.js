@@ -4,7 +4,7 @@ import 'angular-scroll';
 import 'angular-hotkeys';
 import 'angular-bind-html-compile';
 import Tether from 'tether';
-import Hone from 'hone'; // eslint-disable-line no-unused-vars
+import Hone from 'hone';
 import './styles/angular-ui-tour.css';
 
 function run(TourConfig, uiTourService, $rootScope, $injector) {
@@ -38,7 +38,7 @@ export default angular.module('bm.uiTour', [
     .value('Tether', Tether)
     .constant('positionMap', require('./tether-position-map').default)
     .provider('TourConfig', require('./tour-config-provider').default)
-    .factory('uiTourBackdrop', require('./backdrop-service').default)
+    .factory('uiTourBackdrop', ['$document', Hone, require('./backdrop-service').default])
     .factory('TourHelpers', require('./tour-helpers').default)
     .factory('uiTourService', require('./tour-service').default)
     .factory('TourStepService', require('./tour-step-service').default)
